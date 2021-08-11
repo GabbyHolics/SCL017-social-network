@@ -11,8 +11,8 @@ export const displayPosts = async (publicPost, userId) => {
       const orderCollection = await collectionFilter.orderBy('timestamp', 'desc');
       collection = await orderCollection.get();
     }
-    collection.docs.forEach((doc) => {
-      viewPost(doc, publicPost, false);
-    });
+    for( const doc of collection.docs){
+     await viewPost(doc, publicPost, false);
+    };
   }
 };
