@@ -157,4 +157,4 @@ Gracias a estos, se pudieron realizar algunas mejoras a la funcionalidad y dise√
 
 
 ## Enlace
-[](https://gabbyholics.github.io/SCL017-social-network/)
+(https://gabbyholics.github.io/SCL017-social-network/)
