@@ -19,9 +19,7 @@ const firestore = () => {
 
   let firebase = {
     firestore: firestore
-    // auth: () => {
-    //   return 'hola'
-    // }
+  
   };
 
  

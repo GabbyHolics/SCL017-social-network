@@ -2,7 +2,7 @@
 let database = null;
 export const firebaseGetDatabase = () => database;
 
-export const firebaseInit = (onFirebaseInit) => { 
+export const firebaseInit = (onFirebaseInit) => {
   const firebaseConfig = {
     apiKey: 'AIzaSyC7VRqwv_KqG8k7lA6EpUuPIvQ70r-jafY',
     authDomain: 'bearhug-ca9c3.firebaseapp.com',
