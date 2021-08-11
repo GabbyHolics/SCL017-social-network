@@ -45,4 +45,3 @@ export const setPageHash = (hash) => {
     window.location.hash = hash;
   }
 };
-
