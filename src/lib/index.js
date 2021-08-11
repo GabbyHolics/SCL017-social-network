@@ -2,35 +2,17 @@ import { firebaseGetValidUser, firebaseInit } from './firebase.js';
 import { setTemplate, setPageHash } from './routes.js';
 import { realtimeListener } from '../dataFunctions/firebaseListener.js';
 
-export const initApp = () => {
-  firebaseInit(() => {
+export const initApp = () => { 
+  firebaseInit(() => { // onFirebaseInit
     firebaseGetValidUser();
     setTemplate(window.location.hash);
     realtimeListener();
   });
 
-  // if (window.location.pathname === '/home') {
-  //   setTemplate(window.location.hash);
-  // } else if (window.location.pathname === '/register') {
-  //   setTemplate('#register');
-  // } else if (window.location.pathname === '/') {
-  //   setTemplate('');
-  // }
-
-  // window.onpopstate = () => {
-  //   if (window.location.pathname === '/home') {
-  //     setTemplate('#home');
-  //   } else if (window.location.pathname === '/register') {
-  //     setTemplate('#register');
-  //   } else if (window.location.pathname === '/') {
-  //     setTemplate('');
-  //   }
-  // };
-
   firebase.auth().onAuthStateChanged((user) => {
     if (user != null && user.emailVerified === true) {
       setPageHash('#home');
-    } else if (!window.location.hash.includes('#register')) {
+    } else if (!window.location.hash.includes('#register')) {// para no recargue pantalla login, cuando esta en la parte de verificar email
       setPageHash('#login');
     }
   });
@@ -38,5 +20,4 @@ export const initApp = () => {
 
 window.addEventListener('hashchange', () => {
   setTemplate(window.location.hash);
-  // changeRoute(window.location.hash);
 });
