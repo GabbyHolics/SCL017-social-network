@@ -157,4 +157,4 @@ Gracias a estos, se pudieron realizar algunas mejoras a la funcionalidad y diseÃ
 
 
 ## Enlace
-(https://gabbyholics.github.io/SCL017-social-network/)
+[BearHug](https://gabbyholics.github.io/SCL017-social-network/) ğŸ»
